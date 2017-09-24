@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf28d564-08bf-4ff2-8216-e6ded80e14fb" name="Default" comment="" />
+    <list default="true" id="cf28d564-08bf-4ff2-8216-e6ded80e14fb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KTANE.ipr" afterPath="$PROJECT_DIR$/KTANE.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KTANE.iws" afterPath="$PROJECT_DIR$/KTANE.iws" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -22,7 +26,7 @@
       <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="238">
               <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,7 +38,7 @@
       <file leaf-file-name="GeneralController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/controllers/GeneralController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="595">
               <caret line="51" column="140" lean-forward="false" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -43,16 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleWire.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleWire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/tasks/SimpleWire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="379">
               <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5380#5381#0" expanded="true" />
-                <element signature="e#5424#5425#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,6 +89,9 @@
         <option value="Enum" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -374,6 +389,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/ru/ex/ktane/general.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/ex/ktane/controllers/GeneralController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/ex/ktane/tasks/SimpleWire.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -382,6 +398,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="362" />
@@ -404,88 +426,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KTANE" type="b2602c69:ProjectViewProjectNode" />
               <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ktane" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ktane" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ktane" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ktane" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ktane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KTANE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="ktane" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -637,29 +591,29 @@
       <updated>1506270733407</updated>
       <workItem from="1506270735747" duration="15941000" />
       <workItem from="1506287507422" duration="3051000" />
+      <workItem from="1506291027893" duration="147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18992000" />
+    <option name="totallyTimeSpent" value="19139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -672,6 +626,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -691,6 +646,44 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/controllers/GeneralController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="51" column="140" lean-forward="false" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/utils/Wire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/tasks/SimpleWire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
@@ -700,118 +693,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ru/ex/ktane/general.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1506289869394" expanded="true" signature="1282:18067" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1396:2366" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1434:2334" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1583:1790" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1630:1750" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1929:2295" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1976:2096" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2136:2253" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2518:4871" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2575:3070" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2623:2719" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2766:2874" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2914:3031" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3157:3357" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3204:3312" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3502:3610" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3802:3910" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="4099:4207" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="4397:4505" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="4679:4787" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5055:7408" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5112:5607" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5160:5256" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5303:5411" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5451:5568" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5694:5894" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5741:5849" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6039:6147" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6339:6447" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6636:6744" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6934:7042" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7216:7324" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7592:9945" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7649:8144" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7697:7793" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7840:7948" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7988:8105" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8231:8431" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8278:8386" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8576:8684" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8876:8984" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="9173:9281" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="9471:9579" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="9753:9861" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10129:12482" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10186:10681" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10234:10330" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10377:10485" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10525:10642" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10768:10968" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10815:10923" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="11113:11221" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="11413:11521" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="11710:11818" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12008:12116" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12290:12398" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12666:15019" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12723:13218" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12771:12867" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12914:13022" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13062:13179" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13305:13505" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13352:13460" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13650:13758" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13950:14058" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="14247:14355" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="14545:14653" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="14827:14935" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15203:17556" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15260:15755" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15308:15404" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15451:15559" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15599:15716" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15842:16042" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15889:15997" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="16187:16295" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="16487:16595" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="16784:16892" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="17082:17190" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="17364:17472" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18205:18352" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18224:18339" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18379:18526" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18398:18513" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18560:18707" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18579:18694" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18739:18886" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18758:18873" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18912:19059" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18931:19046" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19084:19231" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19103:19218" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19266:19413" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19285:19400" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19451:19598" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19470:19585" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19626:19773" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19645:19760" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19799:19946" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19818:19933" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19985:20132" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="20004:20119" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="20150:20154" ph="..." />
-          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/controllers/GeneralController.java">
@@ -838,8 +726,6 @@
           <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5380#5381#0" expanded="true" />
-            <element signature="e#5424#5425#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -898,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="145" column="35" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,9 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding>
-            <element signature="e#5260#5261#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,9 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="e#3173#3174#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -957,9 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#2502#2503#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -967,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,9 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#721#722#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,128 +855,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="2584" column="0" lean-forward="false" selection-start-line="2584" selection-start-column="0" selection-end-line="2584" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ru/ex/ktane/general.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <marker date="1506289869394" expanded="true" signature="1282:18067" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1396:2366" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1434:2334" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1583:1790" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1630:1750" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1929:2295" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="1976:2096" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2136:2253" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2518:4871" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2575:3070" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2623:2719" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2766:2874" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="2914:3031" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3157:3357" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3204:3312" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3502:3610" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="3802:3910" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="4099:4207" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="4397:4505" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="4679:4787" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5055:7408" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5112:5607" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5160:5256" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5303:5411" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5451:5568" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5694:5894" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="5741:5849" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6039:6147" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6339:6447" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6636:6744" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="6934:7042" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7216:7324" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7592:9945" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7649:8144" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7697:7793" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7840:7948" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="7988:8105" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8231:8431" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8278:8386" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8576:8684" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="8876:8984" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="9173:9281" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="9471:9579" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="9753:9861" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10129:12482" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10186:10681" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10234:10330" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10377:10485" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10525:10642" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10768:10968" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="10815:10923" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="11113:11221" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="11413:11521" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="11710:11818" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12008:12116" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12290:12398" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12666:15019" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12723:13218" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12771:12867" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="12914:13022" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13062:13179" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13305:13505" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13352:13460" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13650:13758" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="13950:14058" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="14247:14355" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="14545:14653" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="14827:14935" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15203:17556" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15260:15755" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15308:15404" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15451:15559" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15599:15716" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15842:16042" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="15889:15997" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="16187:16295" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="16487:16595" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="16784:16892" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="17082:17190" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="17364:17472" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18205:18352" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18224:18339" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18379:18526" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18398:18513" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18560:18707" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18579:18694" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18739:18886" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18758:18873" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18912:19059" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="18931:19046" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19084:19231" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19103:19218" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19266:19413" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19285:19400" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19451:19598" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19470:19585" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19626:19773" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19645:19760" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19799:19946" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19818:19933" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="19985:20132" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="20004:20119" ph="..." />
-            <marker date="1506289869394" expanded="true" signature="20150:20154" ph="..." />
-          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="238">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1124,7 +888,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/controllers/GeneralController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="595">
           <caret line="51" column="140" lean-forward="false" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1134,13 +898,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ex/ktane/tasks/SimpleWire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="379">
           <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5380#5381#0" expanded="true" />
-            <element signature="e#5424#5425#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
