@@ -38,6 +38,11 @@ public class GeneralController {
     public void initialize() {
         initSimpleWires();
         initButton();
+        initSymbols();
+    }
+
+    private void initSymbols(){
+        
     }
 
     private void initButton(){
