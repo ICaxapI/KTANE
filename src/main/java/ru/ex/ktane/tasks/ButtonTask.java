@@ -34,9 +34,7 @@ public class ButtonTask {
     }
 
     public static ButtonTask getInstance(){
-        if (instance == null){
-            instance = new ButtonTask();
-        }
+        if (instance == null) instance = new ButtonTask();
         return instance;
     }
 

@@ -119,9 +119,7 @@ public class SimpleWire {
     }
 
     static public SimpleWire getInstance(){
-        if (instance == null){
-            instance = new SimpleWire();
-        }
+        if (instance == null) instance = new SimpleWire();
         return instance;
     }
 

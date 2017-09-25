@@ -1,19 +1,36 @@
 package ru.ex.ktane.controllers;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Bounds;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.effect.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import ru.ex.ktane.tasks.ButtonTask;
 import ru.ex.ktane.tasks.SimpleWire;
 import ru.ex.ktane.utils.ButtonColor;
 import ru.ex.ktane.utils.ButtonLabel;
 import ru.ex.ktane.utils.ButtonOther;
+import ru.ex.ktane.utils.Symbols;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
 
 public class GeneralController {
 
@@ -34,6 +51,12 @@ public class GeneralController {
     private ArrayList<CheckBox> buttonOther;
     //Button
 
+    //Symbols
+    @FXML private GridPane symbolsPane;
+    ArrayList<File> symbolsImages;
+    ArrayList<Symbols> symbolsActiveSymbols;
+    //Symbols
+
 
     public void initialize() {
         initSimpleWires();
@@ -42,7 +65,41 @@ public class GeneralController {
     }
 
     private void initSymbols(){
-        
+        ClassLoader cl = this.getClass().getClassLoader();
+        List<File> files;
+        symbolsImages = new ArrayList<>();
+        symbolsActiveSymbols = new ArrayList<>();
+        try {
+            files = Files.walk(Paths.get(cl.getResource("ru/ex/ktane/img/symbols/").toURI()))
+                .filter(Files::isRegularFile)
+                .map(Path::toFile)
+                .collect(Collectors.toList());
+            symbolsImages.addAll(files);
+            files.clear();
+            byte cellNumb = 0;
+            for (int r = 0; r <= 2; r++) {
+                for (int c = 0; c <= 8; c++) {
+                    ImageView imageView = new ImageView(symbolsImages.get(cellNumb).toURI().toString());
+                    symbolsPane.add(imageView, c, r);
+                    imageView.setUserData(Symbols.valueOf(symbolsImages.get(cellNumb).getName().split(".png")[0]));
+                    imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+                        if (symbolsActiveSymbols.contains(imageView.getUserData())){
+                            symbolsActiveSymbols.remove(imageView.getUserData());
+                            imageView.setEffect(null);
+                        }
+                        else if (symbolsActiveSymbols.size() < 4){
+                            symbolsActiveSymbols.add((Symbols) imageView.getUserData());
+                            imageView.setEffect(new ColorAdjust(0.5, 0.8, 0.5, 0.5));
+                        }
+                        System.out.println((symbolsActiveSymbols.toString()));
+                    });
+                    cellNumb++;
+                }
+            }
+        } catch (IOException | URISyntaxException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void initButton(){
