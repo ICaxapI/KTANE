@@ -85,9 +85,8 @@ public class GeneralController {
             }
             radioButtonA.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
                 buttonLabel.forEach(radioButtonB -> {
-                    if (!radioButtonA.equals(radioButtonB)) radioButtonB.setSelected(false);
                     if (!radioButtonA.isSelected()) radioButtonA.setSelected(true);
-                    System.out.println();//TODO Убрать
+                    if (!radioButtonA.equals(radioButtonB)) radioButtonB.setSelected(false);
                 });
                 switch (radioButtonA.getText()){
                     case "Abort":
