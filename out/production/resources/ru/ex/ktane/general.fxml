@@ -7,6 +7,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -19,11 +20,11 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #bbb;">
                <children>
-                  <VBox fx:id="simpleWire" layoutX="14.0" layoutY="14.0" prefHeight="581.0" prefWidth="1020.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                  <VBox fx:id="simpleWire" prefHeight="581.0" prefWidth="1020.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 20px;">
                            <children>
-                              <Button fx:id="resetSimpleWires" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Сбросить цвета">
+                              <Button fx:id="resetSimpleWires" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Сбросить">
                                  <HBox.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </HBox.margin>
@@ -324,7 +325,130 @@
       </Tab>
       <Tab text="Кнопка">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #bbb;">
+               <children>
+                  <VBox fx:id="button" alignment="CENTER" depthTest="DISABLE" prefHeight="581.0" prefWidth="1020.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 20px;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <Button fx:id="buttonReset" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Сбросить" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 20px;">
+                           <children>
+                              <Label text="Цвет кнопки:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton mnemonicParsing="false" text="Красный" textFill="RED">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Жёлтый" textFill="YELLOW">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Синий" textFill="BLUE">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Белый" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 20px;">
+                           <children>
+                              <Label text="Надпись на кнопке:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton mnemonicParsing="false" text="Abort">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Detonate">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Hold">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Другое">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 20px;">
+                           <children>
+                              <Label text="Другое:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <CheckBox mnemonicParsing="false" text="Нет CAR">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Нет FRK">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Больше 1-ой батарейки">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Больше 2-ух батареек" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <TextArea fx:id="buttonSolution" editable="false" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="100.0" right="100.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
          </content>
       </Tab>
       <Tab text="Символы">

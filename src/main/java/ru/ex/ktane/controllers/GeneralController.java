@@ -1,33 +1,162 @@
 package ru.ex.ktane.controllers;
 
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import ru.ex.ktane.tasks.ButtonTask;
 import ru.ex.ktane.tasks.SimpleWire;
+import ru.ex.ktane.utils.ButtonColor;
+import ru.ex.ktane.utils.ButtonLabel;
+import ru.ex.ktane.utils.ButtonOther;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class GeneralController {
+
+    //SimpleWire
     @FXML private VBox simpleWire;
     @FXML private TextField simpleWireSolution;
     @FXML private Button resetSimpleWires;
     @FXML private CheckBox simpleWiresEvenSerial;
-
     private ArrayList<ArrayList<RadioButton>> simpleWiresArray;
-    private byte simpleWireCount = 0;
+    //SimpleWire
+
+    //Button
+    @FXML private VBox button;
+    @FXML private Button buttonReset;
+    @FXML private TextArea buttonSolution;
+    private ArrayList<RadioButton> buttonColor;
+    private ArrayList<RadioButton> buttonLabel;
+    private ArrayList<CheckBox> buttonOther;
+    //Button
+
 
     public void initialize() {
+        initSimpleWires();
+        initButton();
+    }
+
+    private void initButton(){
+        List<HBox> buttonList = button.getChildren().stream().filter(node -> node instanceof HBox).map(node -> (HBox) node).collect(Collectors.toList());
+
+        buttonColor = new ArrayList<>();
+        List<RadioButton> radioColor = buttonList.get(1).getChildren().stream().filter(node -> node instanceof RadioButton).map(node -> (RadioButton) node).collect(Collectors.toList());
+        radioColor.forEach(radioButtonA -> {
+            buttonColor.add(radioButtonA);
+            if (radioButtonA.getText().equals("Красный")){
+                radioButtonA.setSelected(true);
+                ButtonTask.getInstance().setButtonColor(ButtonColor.red);
+            }
+            radioButtonA.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+                buttonColor.forEach(radioButtonB -> {
+                    if (!radioButtonA.equals(radioButtonB)) radioButtonB.setSelected(false);
+                    if (!radioButtonA.isSelected()) radioButtonA.setSelected(true);
+                });
+                switch (radioButtonA.getText()){
+                    case "Красный":
+                        ButtonTask.getInstance().setButtonColor(ButtonColor.red);
+                        break;
+                    case "Жёлтый":
+                        ButtonTask.getInstance().setButtonColor(ButtonColor.yellow);
+                        break;
+                    case "Синий":
+                        ButtonTask.getInstance().setButtonColor(ButtonColor.blue);
+                        break;
+                    case "Белый":
+                        ButtonTask.getInstance().setButtonColor(ButtonColor.white);
+                        break;
+                }
+                buttonSolution.deleteText(0, buttonSolution.getLength());
+                buttonSolution.appendText(ButtonTask.getInstance().foundSolution());
+            });
+        });
+
+        buttonLabel = new ArrayList<>();
+        List<RadioButton> radioLabel = buttonList.get(2).getChildren().stream().filter(node -> node instanceof RadioButton).map(node -> (RadioButton) node).collect(Collectors.toList());
+        radioLabel.forEach(radioButtonA -> {
+            buttonLabel.add(radioButtonA);
+            if (radioButtonA.getText().equals("Abort")){
+                radioButtonA.setSelected(true);
+                ButtonTask.getInstance().setButtonLabel(ButtonLabel.abort);
+            }
+            radioButtonA.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+                buttonLabel.forEach(radioButtonB -> {
+                    if (!radioButtonA.equals(radioButtonB)) radioButtonB.setSelected(false);
+                    if (!radioButtonA.isSelected()) radioButtonA.setSelected(true);
+                    System.out.println();//TODO Убрать
+                });
+                switch (radioButtonA.getText()){
+                    case "Abort":
+                        ButtonTask.getInstance().setButtonLabel(ButtonLabel.abort);
+                        break;
+                    case "Detonate":
+                        ButtonTask.getInstance().setButtonLabel(ButtonLabel.detonate);
+                        break;
+                    case "Hold":
+                        ButtonTask.getInstance().setButtonLabel(ButtonLabel.hold);
+                        break;
+                    case "Другое":
+                        ButtonTask.getInstance().setButtonLabel(ButtonLabel.other);
+                        break;
+                }
+                buttonSolution.deleteText(0, buttonSolution.getLength());
+                buttonSolution.appendText(ButtonTask.getInstance().foundSolution());
+            });
+        });
+
+        buttonOther = new ArrayList<>();
+        List<CheckBox> otherBoxes = buttonList.get(3).getChildren().stream().filter(node -> node instanceof CheckBox).map(node -> (CheckBox) node).collect(Collectors.toList());
+        otherBoxes.forEach(checkBoxA -> {
+            buttonOther.add(checkBoxA);
+            checkBoxA.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+                buttonOther.forEach(checkBoxB -> {
+                    if (checkBoxA.getText().equals("Больше 1-ой батарейки")){
+                        if (checkBoxB.getText().equals("Больше 2-ух батареек")){
+                            if (checkBoxB.isSelected()) checkBoxB.setSelected(false);
+                            ButtonTask.getInstance().removeButtonOthers(ButtonOther.twoOrMoreBatt);
+                        }
+                    }
+                    if (checkBoxA.getText().equals("Больше 2-ух батареек")){
+                        if (checkBoxB.getText().equals("Больше 1-ой батарейки")){
+                            if (checkBoxB.isSelected()) checkBoxB.setSelected(false);
+                            ButtonTask.getInstance().removeButtonOthers(ButtonOther.oneOrMoreBatt);
+                        }
+                    }
+                });
+                switch (checkBoxA.getText()){
+                    case "Нет CAR":
+                        if (checkBoxA.isSelected()) ButtonTask.getInstance().addButtonOthers(ButtonOther.noCar);
+                        else ButtonTask.getInstance().removeButtonOthers(ButtonOther.noCar);
+                        break;
+                    case "Нет FRK":
+                        if (checkBoxA.isSelected()) ButtonTask.getInstance().addButtonOthers(ButtonOther.noFrk);
+                        else ButtonTask.getInstance().removeButtonOthers(ButtonOther.noFrk);
+                        break;
+                    case "Больше 1-ой батарейки":
+                        if (checkBoxA.isSelected()) ButtonTask.getInstance().addButtonOthers(ButtonOther.oneOrMoreBatt);
+                        else ButtonTask.getInstance().removeButtonOthers(ButtonOther.oneOrMoreBatt);
+                        break;
+                    case "Больше 2-ух батареек":
+                        if (checkBoxA.isSelected()) ButtonTask.getInstance().addButtonOthers(ButtonOther.twoOrMoreBatt);
+                        else ButtonTask.getInstance().removeButtonOthers(ButtonOther.twoOrMoreBatt);
+                        break;
+                }
+                buttonSolution.deleteText(0, buttonSolution.getLength());
+                buttonSolution.appendText(ButtonTask.getInstance().foundSolution());
+            });
+        });
+        buttonSolution.deleteText(0, buttonSolution.getLength());
+        buttonSolution.appendText(ButtonTask.getInstance().foundSolution());
+        buttonReset.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+            resetButton();
+        });
+    }
+
+    private void initSimpleWires(){
         simpleWiresArray = new ArrayList<>();
         List<HBox> wiresList = simpleWire.getChildren().stream().filter(node -> node instanceof HBox).map(node -> (HBox) node).collect(Collectors.toList());
         wiresList.forEach(hBox -> {
@@ -38,7 +167,7 @@ public class GeneralController {
                 if (radioButtonA.getText().equals("Отсутствует")) radioButtonA.setSelected(true);
                 radioButtonA.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
                     radioButtonsArray.forEach(radioButtonB -> {
-                        if (radioButtonB != radioButtonA) radioButtonB.setSelected(false);
+                        if (!radioButtonB.equals(radioButtonA)) radioButtonB.setSelected(false);
                         SimpleWire.getInstance().removeFromActiveArray(radioButtonB);
                     });
                     if (!radioButtonA.getText().equals("Отсутствует")) SimpleWire.getInstance().addToActiveArray(radioButtonA);
@@ -72,6 +201,44 @@ public class GeneralController {
         });
         simpleWiresEvenSerial.setSelected(false);
         SimpleWire.getInstance().setEvenSerial(false);
+    }
+
+    private void resetButton(){
+        buttonColor.forEach(radioButton -> {
+            if (radioButton.getText().equals("Красный")){
+                radioButton.setSelected(true);
+                ButtonTask.getInstance().setButtonColor(ButtonColor.red);
+            } else {
+                radioButton.setSelected(false);
+            }
+        });
+        buttonLabel.forEach(radioButton -> {
+            if (radioButton.getText().equals("Abort")){
+                radioButton.setSelected(true);
+                ButtonTask.getInstance().setButtonLabel(ButtonLabel.abort);
+            } else {
+                radioButton.setSelected(false);
+            }
+        });
+        buttonOther.forEach(checkBox -> {
+            checkBox.setSelected(false);
+            switch (checkBox.getText()){
+                case "Нет CAR":
+                    ButtonTask.getInstance().removeButtonOthers(ButtonOther.noCar);
+                    break;
+                case "Нет FRK":
+                    ButtonTask.getInstance().removeButtonOthers(ButtonOther.noFrk);
+                    break;
+                case "Больше 1-ой батарейки":
+                    ButtonTask.getInstance().removeButtonOthers(ButtonOther.oneOrMoreBatt);
+                    break;
+                case "Больше 2-ух батареек":
+                    ButtonTask.getInstance().removeButtonOthers(ButtonOther.twoOrMoreBatt);
+                    break;
+            }
+        });
+        buttonSolution.deleteText(0, buttonSolution.getLength());
+        buttonSolution.appendText(ButtonTask.getInstance().foundSolution());
     }
 
 }
