@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import ru.ex.ktane.tasks.ButtonTask;
 import ru.ex.ktane.tasks.SimpleWire;
+import ru.ex.ktane.tasks.SymbolsTask;
 import ru.ex.ktane.utils.ButtonColor;
 import ru.ex.ktane.utils.ButtonLabel;
 import ru.ex.ktane.utils.ButtonOther;
@@ -53,6 +54,9 @@ public class GeneralController {
 
     //Symbols
     @FXML private GridPane symbolsPane;
+    @FXML private Button resetSymbols;
+    @FXML private HBox symbolsAnsverPane;
+    ArrayList<ImageView> ansverImages;
     ArrayList<File> symbolsImages;
     ArrayList<Symbols> symbolsActiveSymbols;
     //Symbols
@@ -65,12 +69,15 @@ public class GeneralController {
     }
 
     private void initSymbols(){
-        ClassLoader cl = this.getClass().getClassLoader();
+        ansverImages = new ArrayList<>();
+        List<ImageView> imageViews = symbolsAnsverPane.getChildren().stream().filter(node -> node instanceof ImageView).map(node -> (ImageView) node).collect(Collectors.toList());
+        ansverImages.addAll(imageViews);
+
         List<File> files;
         symbolsImages = new ArrayList<>();
         symbolsActiveSymbols = new ArrayList<>();
         try {
-            files = Files.walk(Paths.get(cl.getResource("ru/ex/ktane/img/symbols/").toURI()))
+            files = Files.walk(Paths.get(getClass().getResource("../img/symbols/").toURI()))
                 .filter(Files::isRegularFile)
                 .map(Path::toFile)
                 .collect(Collectors.toList());
@@ -86,12 +93,13 @@ public class GeneralController {
                         if (symbolsActiveSymbols.contains(imageView.getUserData())){
                             symbolsActiveSymbols.remove(imageView.getUserData());
                             imageView.setEffect(null);
+                            updateUiSymbols();
                         }
                         else if (symbolsActiveSymbols.size() < 4){
                             symbolsActiveSymbols.add((Symbols) imageView.getUserData());
                             imageView.setEffect(new ColorAdjust(0.5, 0.8, 0.5, 0.5));
+                            updateUiSymbols();
                         }
-                        System.out.println((symbolsActiveSymbols.toString()));
                     });
                     cellNumb++;
                 }
@@ -99,7 +107,25 @@ public class GeneralController {
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
+        resetSymbols.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> resetSymbols());
+    }
 
+    private void updateUiSymbols(){
+        ArrayList<Symbols> solution = SymbolsTask.getInstance().foundSolution(symbolsActiveSymbols);
+        for (int i = 0; i < 4; i++) {
+            if (solution != null && solution.size() == 4) {
+                int finalI = i;
+                symbolsImages.forEach(file -> {
+                    if (file.getName().split(".png")[0].equals(solution.get(finalI).name())) {
+                        ansverImages.get(finalI).setImage(new Image(file.toURI().toString()));
+                    }
+                });
+            } else {
+                ansverImages.forEach(imageView1 -> {
+                    imageView1.setImage(null);
+                });
+            }
+        }
     }
 
     private void initButton(){
@@ -262,6 +288,23 @@ public class GeneralController {
         });
         simpleWiresEvenSerial.setSelected(false);
         SimpleWire.getInstance().setEvenSerial(false);
+    }
+
+    private void resetSymbols(){
+        symbolsActiveSymbols.clear();
+        updateUiSymbols();
+        List<ImageView> symboslImages = symbolsPane.getChildren().stream().filter(node -> node instanceof ImageView).map(node -> (ImageView) node).collect(Collectors.toList());
+        ArrayList<ImageView> symbImages = new ArrayList<>();
+        symbImages.addAll(symboslImages);
+        symbImages.forEach(imageView -> {
+            imageView.setEffect(null);
+        });
+        List<ImageView> symboslAnsImages = symbolsAnsverPane.getChildren().stream().filter(node -> node instanceof ImageView).map(node -> (ImageView) node).collect(Collectors.toList());
+        ArrayList<ImageView> symbImagesAns = new ArrayList<>();
+        symbImagesAns.addAll(symboslAnsImages);
+        symbImagesAns.forEach(imageView -> {
+            imageView.setImage(null);
+        });
     }
 
     private void resetButton(){
