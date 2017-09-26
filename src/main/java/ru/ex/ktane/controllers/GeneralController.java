@@ -13,6 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import ru.ex.ktane.Launcher;
 import ru.ex.ktane.tasks.ButtonTask;
 import ru.ex.ktane.tasks.SimpleWire;
 import ru.ex.ktane.tasks.SymbolsTask;
@@ -23,14 +24,16 @@ import ru.ex.ktane.utils.Symbols;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class GeneralController {
@@ -73,16 +76,10 @@ public class GeneralController {
         List<ImageView> imageViews = symbolsAnsverPane.getChildren().stream().filter(node -> node instanceof ImageView).map(node -> (ImageView) node).collect(Collectors.toList());
         ansverImages.addAll(imageViews);
 
-        List<File> files;
         symbolsImages = new ArrayList<>();
         symbolsActiveSymbols = new ArrayList<>();
         try {
-            files = Files.walk(Paths.get(getClass().getResource("../img/symbols/").toURI()))
-                .filter(Files::isRegularFile)
-                .map(Path::toFile)
-                .collect(Collectors.toList());
-            symbolsImages.addAll(files);
-            files.clear();
+            symbolsImages.addAll(Launcher.getInstance().getFiles());
             byte cellNumb = 0;
             for (int r = 0; r <= 2; r++) {
                 for (int c = 0; c <= 8; c++) {
